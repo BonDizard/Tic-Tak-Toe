@@ -1,0 +1,8 @@
+import 'controller/login_light_controller.dart';import 'package:bharath_s_application5/core/app_export.dart';import 'package:bharath_s_application5/widgets/custom_outlined_button.dart';import 'package:flutter/material.dart';class LoginLightScreen extends GetWidget<LoginLightController> {const LoginLightScreen({Key? key}) : super(key: key);
+
+@override Widget build(BuildContext context) { mediaQueryData = MediaQuery.of(context); return SafeArea(child: Scaffold(body: Container(width: double.maxFinite, padding: EdgeInsets.all(24.h), child: Column(children: [Spacer(flex: 56), CustomImageView(imagePath: ImageConstant.imgT, height: 80.v, width: 74.h), SizedBox(height: 19.v), Text("msg_please_sign_in_to".tr, style: theme.textTheme.bodyMedium), Spacer(flex: 43), CustomOutlinedButton(text: "msg_sign_in_with_google".tr, leftIcon: Container(margin: EdgeInsets.only(right: 10.h), child: CustomImageView(imagePath: ImageConstant.imgIcon24x24, height: 24.adaptSize, width: 24.adaptSize)), buttonStyle: CustomButtonStyles.outlineErrorContainer, onPressed: () {onTapSignInWithGoogle();}), SizedBox(height: 8.v), CustomOutlinedButton(text: "msg_sign_in_with_facebook".tr, leftIcon: Container(margin: EdgeInsets.only(right: 10.h), child: CustomImageView(imagePath: ImageConstant.imgIconFacebook, height: 24.adaptSize, width: 24.adaptSize)), buttonStyle: CustomButtonStyles.outlinePrimary, onPressed: () {onTapSignInWithFaceBook();})])))); } 
+/// Navigates to the loading1LightScreen when the action is triggered.
+onTapSignInWithGoogle() { Get.toNamed(AppRoutes.loading1LightScreen, ); } 
+/// Navigates to the loading1LightScreen when the action is triggered.
+onTapSignInWithFaceBook() { Get.toNamed(AppRoutes.loading1LightScreen, ); } 
+ }
